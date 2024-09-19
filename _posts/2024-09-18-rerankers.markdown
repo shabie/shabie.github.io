@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Finetune Your Re-ranker: Turning a Compass into a GPS"
+title:  "Is your RAG Re-Ranker not helping? This might be why."
 date:   2024-09-18 11:52:39 +0200
 categories: rerankers
 ---  
