@@ -2,7 +2,6 @@
 layout: post
 title:  "Is your RAG Re-Ranker not helping? This might be why."
 date:   2024-09-18 11:52:39 +0200
-categories: rerankers
 ---  
 
 Sarah sighed in frustration as she stared at her laptop screen, the SSH connection to the university server dropping for the third time in the last hour. She was trying to access some important research files for her thesis, but the constant interruptions were driving her mad.
