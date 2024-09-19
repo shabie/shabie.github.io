@@ -1,0 +1,58 @@
+# Jekyll
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+_site/
+vendor
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+
+# Dependencies
+Gemfile.lock
+
+# Build products
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Personal settings
+.bundle/
+.ruby-version
+.ruby-gemset
+
+# Exclude specific files or folders
+# For example, exclude a custom CSS file:
+# assets/css/custom.css
+
+# Exclude drafts
+_drafts/
+
+# Exclude posts you don't want to publish
+# _posts/2023-10-26-unpublished-post.md
+
+# Exclude images or other assets you don't want to commit
+# assets/images/some-image.jpg
+
+# OS X Finder
+.DS_Store
+
+# Node modules
+node_modules/
+
+# IDE files
+.idea/
+*.iml
+.project
+
+# Editor backup files
+*~
+*.swp
+*.swo
+
+# Configuration files (if you don't want to commit them)
+_config.yml.sample
+
+# Github Pages specific
+.github/
