@@ -9,7 +9,7 @@ Welcome to my little corner of the internet. This blog is where I share my thoug
 
 ## Recent Posts
 
-{% for post in site.posts limit:3 %}
+{% for post in site.posts limit:7 %}
   * **[{{ post.title }}]({{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 
