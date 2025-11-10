@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why tails break taxonomies"
+title:  "How tails break taxonomies"
 date:   2025-11-11 00:11:00 +0200
 ---
 
