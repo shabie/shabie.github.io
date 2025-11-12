@@ -8,7 +8,7 @@ date:   2025-08-01 00:14:39 +0200
 
 Consider this query from a lawyer to a RAG system: '_Show me all fraud cases from the last five years where the defendant was a first-time offender, the amount was under $50K, and the judge showed leniency in sentencing_'. By constraining these variables (first-time, under $50K, lenient), the users create a petri dish so they can observe what else grows consistently in that environment. This captures a fundamental need: we often want to study the in-group, but we should get to redraw those boundaries whenever our curiosity shifts.
 
-Traditional RAG chokes on this. The moment someone says 'give me all cases where...', similarity search waves the white flag since it's built for finding similarities, not filtering by criteria. Scanning everything with LLMs at query time is prohibitively slow and expensive. Pre-classifying into rigid categories breaks when users slice data in unexpected ways.
+Traditional RAG chokes on this. The moment someone says 'give me all cases where...', similarity search fails badly because it is not built for filtering by criteria. Scanning everything with LLMs at query time is prohibitively slow and expensive. Pre-classifying into rigid categories breaks when users slice data in unexpected ways.
 
 ### Postgres to the rescue
 
@@ -16,7 +16,7 @@ I found something almost too simple that helped with the problem: Postgres with 
 
 #### Strategic Structured Extraction
 
-Capture the "obvious" dimensions that appear in the vast majority of documents and queries: timestamps, numeric values, and rich text fields that preserve variety without rigid categorization.
+We capture the "obvious" dimensions that appear in the vast majority of documents and queries: timestamps, numeric values, and rich text fields that preserve variety without rigid categorization.
 
 ```json
 {
@@ -39,7 +39,7 @@ Use vectors to catch semantic gaps when keywords don't match. "White-collar crim
 
 #### Boolean Flags
 
-Add broad flags for common filter categories: `is_first_time_offender`, `received_lenient_sentence`, `involved_financial_crime`. These aren't perfect classifications but help narrow search space quickly. The "more" orthogonal they are to each other, the better.
+Add broad flags for common filter categories: `is_first_time_offender`, `received_lenient_sentence`, `involved_financial_crime`. These aren't perfect classifications but help narrow search space quickly. The more "orthogonal" they are to each other, the better.
 
 The system constructs SQL queries combining all approaches:
 
